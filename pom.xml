@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
+	<modules>
+		<module>potato-business</module>
+		<module>potato-plugin</module>
+		<module>potato-business/potato-business-demo</module>
+	</modules>
+
+	<groupId>com.potato.base</groupId>
+	<artifactId>potato-base</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>potato-base</name>
+	<description>spring boot 项目脚手架</description>
+	<properties>
+		<!-- java 版本控制 -->
+		<java.version>1.8</java.version>
+		<!-- maven compiler 配置 -->
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<!-- 项目编码 配置 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<!-- spring 相关版本控制 -->
+		<spring-boot-dependencies.version>2.6.1</spring-boot-dependencies.version>
+	</properties>
+
+	<!-- 项目全局依赖配置 -->
+	<dependencies>
+		<!-- lombok 依赖 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+	</dependencies>
+
+	<!-- 版本号依赖控制,子项目不会默认依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- SpringBoot 依赖版本管理 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot-dependencies.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
