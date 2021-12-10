@@ -1,10 +1,12 @@
 package com.potato.base.plugin.ratelimiter.algorithm.impl;
 
 import com.potato.base.plugin.ratelimiter.algorithm.RateLimiterAlgorithm;
+import com.potato.base.plugin.ratelimiter.dto.RateLimiterExeRequest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scripting.support.ResourceScriptSource;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,6 +31,16 @@ public abstract class AbstractRateLimiterAlgorithm implements RateLimiterAlgorit
         redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource(scriptPath)));
         redisScript.setResultType(List.class);
         this.script = redisScript;
+    }
+    @Override
+    public List<String> getKeys(RateLimiterExeRequest rateLimiterExeRequest) {
+        // 前缀{key} 集群下通过{}保障
+        String prefix = rateLimiterExeRequest.getAlgorithmType().toString() + ".{" + rateLimiterExeRequest.getKey()+"}";
+        // token
+        String tokenKey = prefix + ".token";
+        // 时间戳
+        String timestampKey = prefix + ".timestamp";
+        return Arrays.asList(tokenKey, timestampKey);
     }
     @Override
     public DefaultRedisScript<List<Long>> getScript(){

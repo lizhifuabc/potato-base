@@ -1,6 +1,9 @@
 package com.potato.base.plugin.ratelimiter.algorithm;
 
+import com.potato.base.plugin.ratelimiter.dto.RateLimiterExeRequest;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
+
+import java.util.List;
 
 /**
  * 限流算法
@@ -19,4 +22,11 @@ public interface RateLimiterAlgorithm<T> {
      * @return
      */
     public DefaultRedisScript<T> getScript();
+
+    /**
+     * 获取 redis key
+     * @param rateLimiterExeRequest 限流请求参数
+     * @return
+     */
+    List<String> getKeys(RateLimiterExeRequest rateLimiterExeRequest);
 }
