@@ -27,6 +27,7 @@ import javax.annotation.Resource;
 public class RedisConfiguration {
     @Resource
     private LettuceConnectionFactory lettuceConnectionFactory;
+
     private RedisSerializer<String> keySerializer() {
         return new StringRedisSerializer();
     }

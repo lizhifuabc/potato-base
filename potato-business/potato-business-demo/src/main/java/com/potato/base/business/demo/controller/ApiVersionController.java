@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("{version}/demo")
-public class DemoController extends BaseController {
+public class ApiVersionController extends BaseController {
     @RequestMapping("demo")
     public Response demo(){
         return Response.buildSuccess();
