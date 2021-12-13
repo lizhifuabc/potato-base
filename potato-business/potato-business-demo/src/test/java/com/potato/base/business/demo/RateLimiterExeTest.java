@@ -46,4 +46,15 @@ public class RateLimiterExeTest {
             System.out.println("第" + i +"次操作" + (rateLimiterExeResponse.isAllowed() ? "成功" : "失败"));
         }
     }
+    @Test
+    public void leaky_bucke(){
+        RateLimiterExeRequest rateLimiterExeRequest = new RateLimiterExeRequest.Builder(AlgorithmType.LEAKY_BUCKET,"demo")
+                .withBurstCapacity(20)
+                .withReplenishRate(10)
+                .build();
+        for (int i = 0; i < 20; i++) {
+            RateLimiterExeResponse rateLimiterExeResponse = rateLimiterExe.exe(rateLimiterExeRequest);
+            System.out.println("第" + i +"次操作" + (rateLimiterExeResponse.isAllowed() ? "成功" : "失败"));
+        }
+    }
 }
