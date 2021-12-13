@@ -1,7 +1,7 @@
--- tokenBucketRateLimiterAlgorithm.{demo}.token
+-- TOKEN_BUCKET.{demo}.token
 -- 令牌桶在redis中的key值
 local tokens_key = KEYS[1]
--- tokenBucketRateLimiterAlgorithm.{demo}.timestamp
+-- TOKEN_BUCKET.{demo}.timestamp
 -- 该令牌桶上一次刷新的时间对应的key的值
 local timestamp_key = KEYS[2]
 

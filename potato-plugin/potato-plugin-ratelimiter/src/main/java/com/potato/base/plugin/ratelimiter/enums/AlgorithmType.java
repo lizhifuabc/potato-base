@@ -2,6 +2,7 @@ package com.potato.base.plugin.ratelimiter.enums;
 
 import com.potato.base.plugin.ratelimiter.algorithm.RateLimiterAlgorithm;
 import com.potato.base.plugin.ratelimiter.algorithm.impl.ConcurrentRateLimiterAlgorithm;
+import com.potato.base.plugin.ratelimiter.algorithm.impl.SlidingWindowRateLimiterAlgorithm;
 import com.potato.base.plugin.ratelimiter.algorithm.impl.TokenBucketRateLimiterAlgorithm;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,10 @@ public enum AlgorithmType {
      * 防止并发
      */
     CONCURRENT(ConcurrentRateLimiterAlgorithm::new),
+    /**
+     * 滑动窗口
+     */
+    SLIDING_WINDOW(SlidingWindowRateLimiterAlgorithm::new),
     /**
      * 令牌桶
      */

@@ -54,7 +54,7 @@ public class RedisConfiguration {
 
         redisTemplate.setDefaultSerializer(valueSerializer());
         redisTemplate.afterPropertiesSet();
-        log.info("RedisTemplate config");
+        log.info("RedisTemplate redisTemplate config");
         return redisTemplate;
     }
 
@@ -68,7 +68,7 @@ public class RedisConfiguration {
         StringRedisTemplate stringRedisTemplate = new StringRedisTemplate();
         stringRedisTemplate.setConnectionFactory(lettuceConnectionFactory);
         stringRedisTemplate.afterPropertiesSet();
-        log.info("stringRedisTemplate config");
+        log.info("RedisTemplate stringRedisTemplate config");
         return stringRedisTemplate;
     }
 }

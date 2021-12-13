@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 public class RateLimiterExeController {
     @Resource
     private RateLimiterExe rateLimiterExe;
-    @RequestMapping("CONCURRENT")
+    @RequestMapping("concurrent")
     public void rateLimiterExe(){
         RateLimiterExeRequest rateLimiterExeRequest = new RateLimiterExeRequest.Builder(AlgorithmType.CONCURRENT,"demo").build();
         rateLimiterExe.exe(rateLimiterExeRequest);
