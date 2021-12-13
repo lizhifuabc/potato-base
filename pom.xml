@@ -7,7 +7,8 @@
 		<module>potato-business</module>
 		<module>potato-plugin</module>
 		<module>potato-business/potato-business-demo</module>
-	</modules>
+        <module>potato-plugin/potato-plugin-redisson</module>
+    </modules>
 
 	<groupId>com.potato.base</groupId>
 	<artifactId>potato-base</artifactId>
