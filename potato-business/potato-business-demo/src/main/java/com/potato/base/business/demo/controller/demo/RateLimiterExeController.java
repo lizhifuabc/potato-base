@@ -1,4 +1,4 @@
-package com.potato.base.business.demo.controller;
+package com.potato.base.business.demo.controller.demo;
 
 import com.potato.base.plugin.ratelimiter.RateLimiterExe;
 import com.potato.base.plugin.ratelimiter.dto.RateLimiterExeRequest;

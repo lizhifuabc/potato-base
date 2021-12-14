@@ -8,3 +8,11 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: yfyf_dev
+    password: T%F4eoBPQu3Ne
+    url: jdbc:mysql://127.0.0.1:3306/potato_base
+  jpa:
+    # 控制台显示SQL
+    show-sql: true

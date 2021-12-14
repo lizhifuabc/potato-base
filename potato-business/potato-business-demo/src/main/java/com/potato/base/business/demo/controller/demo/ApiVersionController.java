@@ -1,4 +1,4 @@
-package com.potato.base.business.demo.controller;
+package com.potato.base.business.demo.controller.demo;
 
 import com.potato.base.plugin.common.annotation.ApiVersion;
 import com.potato.base.plugin.common.dto.Response;

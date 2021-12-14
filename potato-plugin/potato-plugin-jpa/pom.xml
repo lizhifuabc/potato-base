@@ -10,33 +10,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>potato-business-demo</artifactId>
+    <artifactId>potato-plugin-jpa</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
     <dependencies>
-        <dependency>
-            <groupId>com.potato.base</groupId>
-            <artifactId>potato-plugin-framework</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.potato.base</groupId>
-            <artifactId>potato-plugin-ratelimiter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.potato.base</groupId>
-            <artifactId>potato-plugin-jpa</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        <!-- spring boot jpa      -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!--  mysql      -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
+
 </project>

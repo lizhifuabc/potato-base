@@ -9,7 +9,8 @@
 		<module>potato-business/potato-business-demo</module>
         <module>potato-plugin/potato-plugin-redisson</module>
 		<module>potato-book</module>
-	</modules>
+        <module>potato-plugin/potato-plugin-jpa</module>
+    </modules>
 
 	<groupId>com.potato.base</groupId>
 	<artifactId>potato-base</artifactId>
