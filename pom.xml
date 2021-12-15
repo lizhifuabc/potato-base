@@ -10,7 +10,8 @@
         <module>potato-plugin/potato-plugin-redisson</module>
 		<module>potato-book</module>
         <module>potato-plugin/potato-plugin-jpa</module>
-    </modules>
+		<module>potato-plugin/potato-plugin-threadpool</module>
+	</modules>
 
 	<groupId>com.potato.base</groupId>
 	<artifactId>potato-base</artifactId>
