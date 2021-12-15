@@ -19,6 +19,11 @@
     <dependencies>
         <dependency>
             <groupId>com.potato.base</groupId>
+            <artifactId>potato-plugin-redisson</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.potato.base</groupId>
             <artifactId>potato-plugin-framework</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -26,7 +31,6 @@
             <groupId>com.potato.base</groupId>
             <artifactId>potato-plugin-ratelimiter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.potato.base</groupId>

@@ -16,3 +16,12 @@ spring:
   jpa:
     # 控制台显示SQL
     show-sql: true
+    hibernate:
+      # 启动时会根据实体类生成数据表，或者更新表结构，不清空数据，开发阶段使用；validate：表结构稳定后使用，可用于正式环境；
+      ddl-auto: validate
+  spring:
+    jackson:
+      serialization:
+        # 格式化输出
+        indent-output: true
+
